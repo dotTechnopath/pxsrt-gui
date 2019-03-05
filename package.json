@@ -1,0 +1,23 @@
+{
+  "name": "pxsrt-gui",
+  "version": "1.0.0",
+  "description": "gui for pixelsorting",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dotTechnopath/pxsrt-gui.git"
+  },
+  "author": "simon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dotTechnopath/pxsrt-gui/issues"
+  },
+  "homepage": "https://github.com/dotTechnopath/pxsrt-gui#readme",
+  "devDependencies": {
+    "electron": "^4.0.6"
+  }
+}
