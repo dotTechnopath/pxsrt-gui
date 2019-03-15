@@ -10,7 +10,7 @@
  
  */
 
-var mode = 2;
+var mode = 0;
 
 // image path is relative to sketch directory
 var img;
@@ -35,7 +35,7 @@ function setup() {
 
     // use only numbers (not variables) for the createCanvas() command, Processing 3
 
-    createCanvas(windowWidth, windowHeight);
+    createCanvas(400, 400);
     // allow recreateCanvas and update surface to image dimensions
     //surface.setResizable(true);
     //surface.setSize(, );
@@ -50,8 +50,9 @@ function draw() {
     image(img, 0, 0);
 
     //loop through columns
+    console.log("Sorting Columns... ")
     while (column < img.width - 1) {
-        //console.log("Sorting Column " + column);
+
         img.loadPixels();
         sortColumn();
         column++;
@@ -59,8 +60,9 @@ function draw() {
 
     }
     // loop through rows
+    console.log("Sorting rows... ")
     while (row < img.height - 1) {
-        //console.log("Sorting Row " + column);
+
         img.loadPixels();
         sortRow();
         row++;
@@ -212,8 +214,7 @@ function getFirstNotBlackX(x,
     return x;
 }
 
-function getNextBlackX(x,
-    y) {
+function getNextBlackX(x, y) {
     x++;
 
     while (img.pixels[x + y * img.width] > blackValue) {
