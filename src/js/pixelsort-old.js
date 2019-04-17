@@ -13,9 +13,9 @@
 var mode = 0;
 
 // image path is relative to sketch directory
-var img;
-var imgFileName = "oh";
-var fileType = "jpg";
+let img;
+var imgFileName = "oh2";
+var fileType = "png";
 
 var loops = 3;
 
@@ -36,10 +36,11 @@ function setup() {
     // use only numbers (not variables) for the createCanvas() command, Processing 3
 
     createCanvas(400, 400);
+    resizeCanvas(windowWidth, windowHeight)
     // allow recreateCanvas and update surface to image dimensions
     //surface.setResizable(true);
     //surface.setSize(, );
-
+   
     // load image onto surface - scale to the available width,height for display
 
 }
@@ -47,7 +48,7 @@ function setup() {
 
 function draw() {
 
-    image(img, 0, 0);
+    image(img, 0, height / 2, img.width / 2, img.height / 2);
 
     //loop through columns
     console.log("Sorting Columns... ")
@@ -70,7 +71,8 @@ function draw() {
     }
 
     // load updated image onto surface and scale to fit the display width,height
-    image(img, 0, 0);
+    image(img, 0, height / 2, img.width / 2, img.height / 2);
+
 
     // if (!saved && frameCount >= loops) {
 
@@ -133,8 +135,8 @@ function sortRow() {
 
         var sortLength = xend - x;
 
-        var unsorted = [];
-        var sorted = [];
+        var unsorted = new Array(sortLength);
+        var sorted = new Array(sortLength);
 
         for (var i = 0; i < sortLength; i++) {
             unsorted[i] = img.pixels[x + i + y * img.width];
@@ -183,8 +185,8 @@ function sortColumn() {
 
         var sortLength = yend - y;
 
-        var unsorted = [];
-        var sorted = [];
+        var unsorted = new Array(sortLength);
+        var sorted = new Array(sortLength);
 
         for (var i = 0; i < sortLength; i++) {
             unsorted[i] = img.pixels[x + (y + i) * img.width];

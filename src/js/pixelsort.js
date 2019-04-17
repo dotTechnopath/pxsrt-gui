@@ -2,8 +2,6 @@ var ndcv = require('ndarray-canvas')
 var lena = require('baboon-image')
 var sort = require('ndarray-pixel-sort')
 
-var slider = document.getElementById("myRange");
-
 function main(threshold) {
     display()
 
@@ -28,6 +26,8 @@ function display() {
 
     canvas.style.margin = '1em'
 }
-slider.oninput = function () {
-    main(this.value)
+
+function runit() {
+    var x = document.getElementById("inputv").value;
+    main(x);
 }

@@ -1,13 +1,17 @@
 <html>
 
 <head>
-    <script src="src/js/p5.min.js"></script>
+    <!-- <script src="src/js/p5.min.js"></script> -->
 </head>
 
 <body>
-    <script src="src/js/pixelsort-old.js"></script>
+    <script src="src/js/pixelsort.js"></script>
+
     <div class="slidecontainer">
+            <button onclick="runit()">Try it</button>
+
         <input type="range" min="0" max="100" value="255" class="slider" id="myRange">
+        <input type="text" name="enter" class="enter" value="" id="inputv"/>
     </div>
     <div id="canvas">
 
