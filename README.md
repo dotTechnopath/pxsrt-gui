@@ -1,6 +1,8 @@
 # pxsrt-gui
 front end interface for the pixel sort script
 
+this doesnt work lmao 
+
 this is work in progress and not ready at all
 
 # how to run the dev 
